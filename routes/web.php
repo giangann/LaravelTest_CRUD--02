@@ -18,3 +18,5 @@ Route::get('/', function () {
 });
 
 Route::get('/user/create', [App\Http\Controllers\UserController::class,'create']);
+// Thêm dòng dưới đây vào
+Route::post('/users/create', [App\Http\Controllers\UserController::class, 'store']);
