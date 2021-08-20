@@ -8,7 +8,9 @@ Chạy câu lệnh: "php artisan serve" để kết nối với server Apache qu
 "Starting Laravel development server: http://127.0.0.1:8000
 [Fri Aug 20 22:59:02 2021] PHP 8.0.3 Development Server (http://127.0.0.1:8000) started"
 
-Sau khi chỉnh sửa route, thêm file 'create.blade.php', quay sang trình duyệt nhập thêm '/user/create'. Nếu màn hình hiện lên nội dung text của file 'create.blade.php' là đã chỉnh route thành công
+Sau khi chỉnh sửa route, thêm file 'create.blade.php', quay sang trình duyệt nhập thêm '/user/create'. Nếu màn hình hiện lên nội dung text của file 'create.blade.php' là đã chỉnh route thành công.
+
+Chuyển sang MySql, tạo Database, sau đó chạy sang file '.env' gán lại biến DB_DATABASE thành tên của Database vừa tạo.
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
