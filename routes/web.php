@@ -17,6 +17,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/user/create', [App\Http\Controllers\UserController::class,'create']);
+//view để create user
+Route::get('/users/create', [App\Http\Controllers\UserController::class,'create']);
 // Thêm dòng dưới đây vào
 Route::post('/users/create', [App\Http\Controllers\UserController::class, 'store']);
+
+// Update user
+// Nhớ là phải truyền thêm id để biết được đối tượng muốn sửa 
+Route::get('/users/update/{id}', [App\Http\Controllers\UserController::class, 'edit']);
+Route::post('/users/update/{id}', [App\Http\Controllers\UserController::class, 'update']);

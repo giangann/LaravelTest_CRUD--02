@@ -27,4 +27,27 @@ class UserController extends Controller
         User::create($data);
         echo"success create user";
     }
+
+    public function edit($id){
+        // Tìm đến đối tượng muốn update
+        $user = User::findOrFail($id);
+
+        // điều hướng đến view edit user và truyền sang dữ liệu về user muốn sửa đổi
+        return view('users.edit', compact('user'));
+    }
+
+    public function update(Request $request, $id){
+        // Tìm đến đối tượng muốn update
+        $user = User::findOrFail($id);
+
+        // gán dữ liệu gửi lên vào biến data
+        $data = $request->all();
+        // dd($data);
+        // mã hóa password trước khi đẩy lên DB
+        $data['password'] = Hash::make($request->password);
+
+        // Update user
+        User::update($data);
+        echo"success update user";
+    }
 }
