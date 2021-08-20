@@ -1,3 +1,14 @@
+Sumary:
+Sau khi cài Php và Composer, tiếp tục cài cả Xampp để có thể dùng Apache server và MySql all in one.
+Hướng dẫn tham khảo: https://viblo.asia/p/laravel-crud-voi-laravel-Do754dWX5M6#_mo-dau-0
+
+Sau khi cài xong Xampp, start 2 dịch vụ là Apache Server và MySql (mở bảng điều khiển XamppControler là thấy), tuyệt đối không đóng bảng điều khiển trong lúc sử dụng.
+
+Chạy câu lệnh: "php artisan serve" để kết nối với server Apache qua port 8000
+"Starting Laravel development server: http://127.0.0.1:8000
+[Fri Aug 20 22:59:02 2021] PHP 8.0.3 Development Server (http://127.0.0.1:8000) started"
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
