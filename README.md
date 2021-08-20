@@ -12,6 +12,16 @@ Sau khi chỉnh sửa route, thêm file 'create.blade.php', quay sang trình duy
 
 Chuyển sang MySql, tạo Database, sau đó chạy sang file '.env' gán lại biến DB_DATABASE thành tên của Database vừa tạo.
 
+Khi tạo project Laravel sẽ gợi ý 4 bảng trong mục database/migrate va đã gợi ý sẵn bảng users
+create_users_table
+create_password_resets_table
+create_failed_jobs_table
+create_personal_access_tokens_table
+
+Nếu giữ nguyên table users do laravel đã gợi ý sẵn từ đầu thì chạy command: "php artisan migrate"
+
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
