@@ -9,26 +9,26 @@ use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
-    public function create(){
+    public function create()
+    {
         return view('users.create');
     }
 
-    public function store(Request $request){
+    public function store(Request $request)
+    {
         // Kiểm tra xem dữ liệu từ client gửi lên bao gốm những gì
-        // dd($request);
-
+        dd($request);
         // gán dữ liệu gửi lên vào biến data
         $data = $request->all();
         // dd($data);
         // mã hóa password trước khi đẩy lên DB
         $data['password'] = Hash::make($request->password);
-
         // Tạo mới user với các dữ liệu tương ứng với dữ liệu được gán trong $data
         User::create($data);
-        echo"success create user";
+        echo "success create user";
     }
-
-    public function edit($id){
+    public function edit($id)
+    {
         // Tìm đến đối tượng muốn update
         $user = User::findOrFail($id);
 
@@ -36,7 +36,8 @@ class UserController extends Controller
         return view('users.edit', compact('user'));
     }
 
-    public function update(Request $request, $id){
+    public function update(Request $request, $id)
+    {
         // Tìm đến đối tượng muốn update
         $user = User::findOrFail($id);
 
@@ -48,6 +49,15 @@ class UserController extends Controller
 
         // Update user
         User::update($data);
-        echo"success update user";
+        echo "success update user";
+    }
+
+    public function delete($id)
+    {
+        // Tìm đến đối tượng muốn xóa
+        $user = User::findOrFail($id);
+
+        $user->delete();
+        echo "success delete user";
     }
 }

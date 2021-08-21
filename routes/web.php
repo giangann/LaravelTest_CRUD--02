@@ -26,3 +26,7 @@ Route::post('/users/create', [App\Http\Controllers\UserController::class, 'store
 // Nhớ là phải truyền thêm id để biết được đối tượng muốn sửa 
 Route::get('/users/update/{id}', [App\Http\Controllers\UserController::class, 'edit']);
 Route::post('/users/update/{id}', [App\Http\Controllers\UserController::class, 'update']);
+
+// Delete user
+// Vẫn nhớ phải truyền id vào nhá
+Route::get('/users/delete/{id}', [App\Http\Controllers\UserController::class, 'delete']);
