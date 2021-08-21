@@ -30,3 +30,6 @@ Route::post('/users/update/{id}', [App\Http\Controllers\UserController::class, '
 // Delete user
 // Vẫn nhớ phải truyền id vào nhá
 Route::get('/users/delete/{id}', [App\Http\Controllers\UserController::class, 'delete']);
+
+// Read user
+Route::get('/users', [App\Http\Controllers\UserController::class, 'index']);

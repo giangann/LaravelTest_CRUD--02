@@ -17,7 +17,7 @@ class UserController extends Controller
     public function store(Request $request)
     {
         // Kiểm tra xem dữ liệu từ client gửi lên bao gốm những gì
-        dd($request);
+        // dd($request);
         // gán dữ liệu gửi lên vào biến data
         $data = $request->all();
         // dd($data);
@@ -48,7 +48,7 @@ class UserController extends Controller
         $data['password'] = Hash::make($request->password);
 
         // Update user
-        User::update($data);
+        $user->update($data);
         echo "success update user";
     }
 
@@ -59,5 +59,14 @@ class UserController extends Controller
 
         $user->delete();
         echo "success delete user";
+    }
+
+    public function index(){
+        // lấy ra toàn bộ user
+        $users = User::all();
+        //dd($users);
+
+        // trả về view hiển thị danh sách user
+        return view('users.index', compact('users'));
     }
 }
