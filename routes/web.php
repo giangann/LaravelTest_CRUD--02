@@ -33,3 +33,7 @@ Route::get('/users/delete/{id}', [App\Http\Controllers\UserController::class, 'd
 
 // Read user
 Route::get('/users', [App\Http\Controllers\UserController::class, 'index']);
+
+//try to validate users input
+Route::get('/login', [App\Http\Controllers\LoginController::class, 'getLogin']);
+Route::post('/login', [App\Http\Controllers\LoginController::class, 'postLogin']);
